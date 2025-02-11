@@ -1,9 +1,12 @@
 import React from "react";
 
-const MenuItem = ({ items }) => {
+const MenuItem = ({ itemId, itemPrice, itemName, itemDescription }) => {
   return (
-    <div>
-      <h1>{items.itemName}</h1>
+    <div className="menu-item">
+      <h2>{itemName}</h2>
+      <p>{itemDescription}</p>
+      <p>Price: ${itemPrice}</p>
+      <button>Add to cart</button>
     </div>
   );
 };

@@ -1,21 +1,12 @@
 import "../../App.css";
 import Menu from "../Menu";
-const MenuApp = () => {
+
+const MenuApp = (props) => {
   return (
     <div className="App">
-      <Menu
-        menuName="Dinner"
-        menuItems={[
-          {
-            itemId: 1,
-            itemPrice: "12",
-            itemName: "Lasagne",
-            itemDescription:
-              "Meat and cheese layered between house-made pasta with bell peppers and onions.",
-          },
-        ]}
-      ></Menu>
+      <Menu menuName={props.menuName} menuItems={props.menuItems}></Menu>
     </div>
   );
 };
+
 export default MenuApp;

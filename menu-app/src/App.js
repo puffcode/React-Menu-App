@@ -1,69 +1,59 @@
 import "./App.css";
 import MenuApp from "./components/MenuApp";
-function App() {
-  let menuData = [
+
+let data = {
+  menuName: "Dessert",
+  menuItems: [
     {
-      menuName: "Dinner",
-      menuItems: [
-        {
-          itemId: 1,
-          itemPrice: "12",
-          itemName: "Lasagne",
-          itemDescription:
-            "Meat and cheese layered between house-made pasta with bell peppers and onions.",
-        },
-        {
-          itemId: 2,
-          itemPrice: "10",
-          itemName: "Cheese Ravioli",
-          itemDescription: "Cheese-filled ravioli served with house red sauce.",
-        },
-        {
-          itemId: 3,
-          itemPrice: "14",
-          itemName: "Chicken Parmesan",
-          itemDescription:
-            "Breaded chicken topped with marinara sauce and lots of cheese served over house made spaghetti.",
-        },
-      ],
+      itemId: 1,
+      itemPrice: "7",
+      itemName: "Chocolate Cake",
+      itemDescription:
+        "A slice of chocolate cake, covered in a chocolate frosting and served with a scoop of vanilla ice cream.",
     },
     {
-      menuName: "Dessert",
-      menuItems: [
-        {
-          itemId: 45,
-          itemPrice: "10",
-          itemName: "Chocolate Lava Cake",
-          itemDescription: "Dark chocolate molten lava cake. Serves 2-3.",
-        },
-        {
-          itemId: 47,
-          itemPrice: "8",
-          itemName: "Tiramisu",
-          itemDescription:
-            "Layers of espresso-soaked ladyfingers and marscarpone cream topped with cocoa and espresso powder.",
-        },
-        {
-          itemId: 49,
-          itemPrice: "5",
-          itemName: "Cannolis",
-          itemDescription:
-            "Three flaky pastries enclosing a rich, ricotta filling dotted with decadent chocolate chips.",
-        },
-        {
-          itemId: 50,
-          itemPrice: "5",
-          itemName: "Cappuccino",
-          itemDescription: "Steamed milk with two ristretto shots of espresso.",
-        },
-      ],
+      itemId: 2,
+      itemPrice: "10",
+      itemName: "Cinnamon Roll",
+      itemDescription:
+        "A freshly baked cinnamon roll, topped with cream cheese frosting.",
     },
-  ];
+    {
+      itemId: 3,
+      itemPrice: "12",
+      itemName: "Guava Pastry",
+      itemDescription:
+        "A flaky puff pastry filled with guava paste and cream cheese.",
+    },
+    {
+      itemId: 4,
+      itemPrice: "10",
+      itemName: "Cheesecake",
+      itemDescription:
+        "A slice of New York-style cheesecake, served with a strawberry sauce.",
+    },
+    {
+      itemId: 5,
+      itemPrice: "11",
+      itemName: "Mochi Ice Cream",
+      itemDescription:
+        "A scoop of ice cream wrapped in a layer of mochi rice cake. Available in chocolate, strawberry, and matcha flavors.",
+    },
+    {
+      itemId: 6,
+      itemPrice: "12",
+      itemName: "Lava Brownie",
+      itemDescription: "A chocolate brownie with a molten chocolate center.",
+    },
+  ],
+};
+
+const App = () => {
   return (
     <div className="App">
-      <MenuApp data={menuData} />
+      <MenuApp menuName={data.menuName} menuItems={data.menuItems} />
     </div>
   );
-}
+};
 
 export default App;
